@@ -1,0 +1,26 @@
+{
+  "name": "testenode",
+  "version": "1.0.0",
+  "description": "teste para estudar node",
+  "main": "node.js",
+  "scripts": {
+    "test": "node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "aulanode"
+  },
+  "keywords": [
+    "aula"
+  ],
+  "author": "Pedro",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
