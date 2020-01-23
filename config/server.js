@@ -18,9 +18,13 @@ var server = http.createServer(function(req, res){
 server.listen(3001);*/
 
 var express = require('express');
+var consign = require('consign');
 var app = express();
+consign().include('app/routes').into(app);
 app.set('view engine', 'ejs');
-app.get('/', function(req, res){
+app.set('views', './app/views')
+module.exports = app;
+/* app.get('/', function(req, res){
     res.render('../secao/default');
 });
 app.get('/back-end',function(req,res){
@@ -31,4 +35,4 @@ app.get('/infraestrutura',function(req,res){
 });
 app.listen(3000,function(){
     console.log("Servidor rodando com Express");
-});
+}); */

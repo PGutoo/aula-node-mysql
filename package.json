@@ -4,7 +4,8 @@
   "description": "teste para estudar node",
   "main": "node.js",
   "scripts": {
-    "test": "node"
+    "test": "node",
+    "dev": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -16,8 +17,11 @@
   "author": "Pedro",
   "license": "ISC",
   "dependencies": {
+    "consign": "^0.1.6",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
+    "msql": "^1.0.3",
+    "mysql": "^2.18.0",
     "nodemon": "^2.0.2"
   },
   "devDependencies": {

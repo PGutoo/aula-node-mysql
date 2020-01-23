@@ -1,15 +1,10 @@
+var db = require('../../config/dbConnection');
 module.exports=function(app){
     app.get('/frontend', function(req,res){
-        var mysql=require('mysql');
-        var connection = mysql.createConnection({
-            host:'localhost',
-            user:'root',
-            password:'',
-            database:'projeto_node'
+        var connection = db();
+        connection.query("SELECT * FROM conteudo WHERE modulo = 'front-end'", function(error,result){
+            res.render('secao/frontend', { dados: result });
+            //res.send(result);
         });
-        connection.query('select * from conteudo', function(erro,result){
-            res.send(result);
-        });
-        //res.render('secao/frontend');
 });
 };
