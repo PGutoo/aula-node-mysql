@@ -19,10 +19,17 @@ server.listen(3001);*/
 
 var express = require('express');
 var consign = require('consign');
+var bodyParser = require('body-parser');
 var app = express();
-consign().include('app/routes').into(app);
 app.set('view engine', 'ejs');
-app.set('views', './app/views')
+app.set('views', './app/views');
+
+app.use(bodyParser.urlencoded({extended: true}));
+
+consign()
+    .include('app/routes')
+    .then('./config/dbConnection.js')
+    .into(app);
 module.exports = app;
 /* app.get('/', function(req, res){
     res.render('../secao/default');

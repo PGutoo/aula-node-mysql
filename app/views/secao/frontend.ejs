@@ -9,5 +9,14 @@
         <%for(i=0;i < dados.length; i++){%>
             <p><%=dados[i].nome%></p>
         <%}%>
+        <form action='/frontend/salvar'method='post'>
+            <input type='text' name='nome'/>
+            <input type='hidden' name='modulo' value='front-end' readonly='readonly'>
+            <input type='submit' value='Adicionar'/>
+        </form>
+        <form action='/frontend/delete' method='post'>
+            <input type='text' name='nome'/>
+            <button type='submit' value='Deletar'>delata ai mano</button>
+        </form>
     </body>
 </html>
